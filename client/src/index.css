@@ -1,0 +1,447 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(255, 255, 255);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App{
+  height:100vh;
+}
+
+li{
+  list-style: none;
+}
+
+.chatBox{
+  border: 3px solid black;
+  flex:.25;
+  background-color: rgb(126, 123, 123);
+}
+
+.chatHeader{
+  border: 1px solid rgb(0, 0, 0);
+  flex:.1;
+}
+
+.chatBody{
+  overflow-x:hidden;
+  overflow-y:auto;
+  flex:.85;
+  max-height:fit-content;
+  max-width: 25vw;
+  max-height: 18vh;
+}
+
+.chatBottom{
+  flex:.05;
+  border:1px solid black;
+  background-color: rgb(203, 193, 179);
+}
+
+.handCards{
+  border: 3px solid black;
+  flex:.75;
+  justify-content: center;
+  background-image: url('./wooden.jpg');  
+  overflow-x: hidden;
+  overflow-y:hidden;
+}
+
+.cards{
+  width:74.5vw;
+  height:20vh;
+  background-image: url('./wooden.jpg');
+
+}
+
+
+.cardsInHand{
+  margin-left: -1.5rem;
+  
+}
+
+
+.textBack{
+  font-weight: 1000;
+}
+
+.faceUpHand:hover{
+  width:8rem;
+  height:10rem;
+  margin-left: 2rem;
+  margin-right:1rem;
+}
+
+
+
+.innerScreen{
+  width:60vw;
+  height:55vh;
+    background-image: url('./grassBack2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+.firstHalf{
+  flex:.7;
+}
+
+.secondHalf{
+  flex:.3;
+}
+
+.mainScreen{
+  border: 3px solid black;
+  flex:.75;
+  background-image: url('./metal.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.eventsAndDecks{
+  border: 3px solid black;
+  flex:.25;
+  
+}
+
+
+
+.listStyle{
+  list-style: none;
+  width:10rem;
+  height: 2rem;
+  border:2px solid blue;
+  background-color: aqua;
+}
+
+.GameList{
+  display:flex;
+  flex-direction: column;
+}
+
+.cards{
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainContainer{
+  
+  width:5.3rem;
+  height:8rem;
+  background: none;
+  transform:translate(-50%,-50%);
+  margin-left: 2.5rem;
+  margin-top: 4rem;
+}
+
+.theCard:hover{
+  transform:rotateY(180deg);
+}
+
+
+
+.theGameCardFlip{
+  position: relative;
+  transform:rotateY(180deg);
+  width:100%;
+  height:100%;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+  border-radius: 15px;
+  box-shadow:0 15px 60px rgba(0,0,0,.5);
+  
+}
+
+
+.theGameCard{
+  position: relative;
+  
+  width:100%;
+  height:100%;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+  border-radius: 15px;
+  box-shadow:0 15px 60px rgba(0,0,0,.5);
+}
+
+.theCard{
+  position: relative;
+  
+  width:100%;
+  height:100%;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+  border-radius: 15px;
+  box-shadow:0 15px 60px rgba(0,0,0,.5);
+}
+
+.down{
+  position: absolute;
+  width:100%;
+  height:100%;
+  backface-visibility: hidden;
+  background-image: url('./cardBack.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 0;
+  border-radius: 15px;
+  box-shadow:0 15px 60px rgba(0,0,0,.5);
+  
+  
+}
+
+
+.up{
+  position: absolute;
+  width:100%;
+  height:100%;
+  backface-visibility: hidden;
+  background-color: rgb(196, 171, 171);
+  text-align: center;
+  word-break:break-all;
+  border-radius: 15px;
+  box-shadow:0 15px 60px rgba(0,0,0,.5);
+  transform:rotateY(180deg);
+  
+}
+
+
+
+.faceDown{
+  width:5.3rem;
+  height:8rem;
+  background-image: url('./cardBack.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 0;
+  border-radius: 15px;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  box-shadow:0 15px 60px rgba(0,0,0,.5);
+}
+
+.faceUp{
+  width:5.3rem;
+  height:8rem;
+  margin-left: 1rem;
+  margin-top: .5rem;
+  margin-bottom:.5rem;
+  background-color: rgb(196, 171, 171);
+  text-align: center;
+  word-break:break-all;
+  border-radius: 15px;
+  box-shadow:0 15px 60px rgba(0,0,0,.5);
+}
+
+
+
+.x{
+  margin-left: -.2rem;
+  margin-top: -.03rem;
+}
+
+.cardSpot{
+  width:6rem;
+  height:9rem;
+  border: .5rem solid white;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+
+
+.selectionCards{
+  justify-content: center;
+  width:90vw;
+  height:70vh;
+  outline: 3px solid black;
+  flex-wrap:wrap;
+  overflow-y:scroll;
+  background-color: rgb(111, 161, 161);
+}
+
+.selectionUsers{
+  width:90vw;
+  height:10vh;
+  outline: 3px solid black;
+  margin-top: 1rem;
+  background-color: rgb(196, 142, 142);
+}
+
+.myModal{
+  position: fixed;
+  top:50%;
+  left:50%;
+  background-color:rgb(49, 57, 149);
+  transform: translate(-50%,-50%);
+  height:75vh;
+  width:50vw;
+  z-index: 1000;
+}
+
+.gameModal{
+  position: fixed;
+  top:50%;
+  left:50%;
+  background-image: url('./eventBack.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: translate(-50%,-50%);
+  height:80vh;
+  width:60vw;
+  z-index: 1000;
+}
+
+.eventModal{
+  position: fixed;
+  top:50%;
+  left:50%;
+  background-image: url('./eventBack.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: translate(-50%,-50%);
+  height:80vh;
+  width:60vw;
+  z-index: 1000;
+}
+
+.modalTop{
+  width:100%;
+  height:20%;
+  background-color:rgb(3, 51, 106);
+}
+
+.bottomModal{
+  width:100%; 
+  height: 20%;
+  background-color: rgb(8, 14, 64);
+}
+
+.midMod{
+  overflow-y: scroll;
+  height:60%;
+  width:100%;
+
+}
+
+.modList{
+  flex-wrap:wrap;
+}
+
+.modal-backdrop
+{
+    opacity:0.5 !important;
+}
+
+.trashSide{
+  margin-left:auto;
+  margin-right:1rem;
+}
+
+.inc{
+  background-image: url('./up.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height:20px;
+  width:20px;
+}
+
+.dec{
+  background-image: url('./down.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+}
+
+.num{
+  height:20px;
+  width:20px;
+}
+
+.diceSide{
+  background-color: gray;
+  flex:1
+}
+
+.trashDeckSide{
+  flex:1;
+  background-image: url('./wooden2.jpg');
+
+}
+
+.diceRoll{
+  height:7rem;
+  width:7rem;
+  background-color:rgba(255, 255, 255, 0.695);
+  border-radius: 10px;  
+}
+
+.discardButton{
+  margin-top: 10rem;
+  width:25vw;
+}
+
+.gamesList{
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.gamesStyle{
+  background-color: antiquewhite;
+  width: 100vw;
+  height: 100vh;
+}
+
+.welcome{
+  background-color: rgb(219, 205, 186);
+}
+
+.readyUp{
+  background-color: gainsboro;
+  height: 100vh;
+  width: 100vw;
+}
+
+.playersList{
+  height: 50vh;
+  width:90vw;
+  outline: 3px solid black; 
+  overflow-y: scroll;
+}
+
+.selekt{
+  background-color: rgb(234, 248, 243);
+}
+
+.endGame{
+  background-color:rgb(49, 57, 149);
+  height:100vh;
+  width:100vw;
+}
+
+::-webkit-scrollbar{
+  width:10px; 
+}
+
+::-webkit-scrollbar-track{
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+  background: #888;
+  border-radius: 10px;
+}
