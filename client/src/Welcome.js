@@ -36,7 +36,7 @@ function Welcome({socket}) {
 
   useEffect(()=> {
 
-    socket= (io.connect('http://localhost:3001/'))
+    socket= (io.connect('https://infinite-eyrie-54133.herokuapp.com/'))
 
     socket.on('startScreen', gameList => {
       setGamesList(gameList)

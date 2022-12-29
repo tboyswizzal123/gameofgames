@@ -10,7 +10,7 @@ const server = http.createServer(app);
 const io = new Server(server, {
 
     cors:{
-        origin:"https://gameofgames.netlify.app:443", 
+        origin:"https://gameofgames.netlify.app/", 
         methods: ["GET", "POST"],
     },
 });
@@ -576,6 +576,6 @@ io.on("connection", (socket) => {
 
 });
 
-server.listen(3001, () => {
+server.listen(process.env.PORT || 3001, () => {
 
 });

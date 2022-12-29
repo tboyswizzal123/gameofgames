@@ -12,7 +12,7 @@ import EndGame from './EndGame'
 function Main() {
   const [socket, setSocket]=useState(null)
   useEffect(()=>{
-    setSocket(io.connect('http://localhost:3001/'))
+    setSocket(io.connect('https://infinite-eyrie-54133.herokuapp.com/'))
   }, []);
 
   const [screen,setScreen]=useRecoilState(screenState);
