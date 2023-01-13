@@ -1,2 +1,1 @@
-"# gameofgames" 
-Real time multiplayer card game that my friend wanted me to make.
+"# gameofgames" Real time multiplayer card game that my friend wanted me to make. It runs on node.js/express back end. it uses react as the framework for the front end. socket.io  is what allows the backend and the front end to communicate with each other.
